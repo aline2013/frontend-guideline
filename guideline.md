@@ -290,6 +290,8 @@ span { ... } //避免用通用元素
 .tweet-header .username { ... }
 .tweet .avatar { ... }
 ```
+#### 属性的顺序：position（定位） -> Box-model（盒模型) -> Typographic（内部排版）-> Visual(外观) ->Misc(杂项)
+
 ### JAVASCRIPT部分
 
 #### 缩进,分号,单行长度
@@ -496,7 +498,7 @@ var zhangsan = 'zhangsan';    // 双斜线距离分号一个缩进, 双斜线后
 * **业务逻辑强**相关的代码
 
 #### 文档注释
-对于函数以及全局变量, 需要有详细的文档注释. 文档注释是使用`@param` `@return`等标签来注解, 请参考 <http://usejsdoc.org/>
+对于**函数以及全局变量**, 需要有详细的文档注释. 文档注释是使用`@param` `@return`等标签来注解, 请参考 <http://usejsdoc.org/>
 
 函数注释格式如下
 ```js
