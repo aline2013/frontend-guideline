@@ -381,7 +381,7 @@ function Person(name) {    //构造函数，大写第一个字母
 #### 字符常量
 一般情况下统一使用 `''` 单引号
 ```js
-var name = 'Judy';
+var name = 'Judy'; //统一用单引号
 ```
 
 #### null的使用场景
@@ -404,25 +404,25 @@ var person;
 console.log(person === undefined);    //true
 
 // 推荐
-console.log(typeof person);    // "undefined"
+console.log(typeof person);    // "undefined"，用方法typeof
 ```
 
 #### 字面量
 使用字面量的方式来定义javascript内置类型的变量, 不要使用new操作符. 使用字面量更容易阅读, 而且不会出现潜在错误.
 
 ```js
-// 对象的字面量
-// 不推荐
-var team = new Team();
+// 对象
+var team = new Team();   // 不推荐用new 操作符
 team.title = 'AlloyTeam';
 team.count = 25;
-// 推荐
-var team = {
+
+// 推荐直接用字面量
+var team = {               
     title: 'AlloyTeam',
     count: 25
 };
 
-// 数组的字面量
+// 数组
 // 不推荐
 var colors = new Array('red', 'green', 'blue');
 var numbers = new Array(1, 2, 3, 4);
@@ -430,25 +430,25 @@ var numbers = new Array(1, 2, 3, 4);
 var colors = [ 'red', 'green', 'blue' ];
 var numbers = [ 1, 2, 3, 4 ];
 
-// 正则字面量
+// 正则
 // 不推荐
 var reg = new RegExp('\s+',g);
 // 推荐
 var reg = /\s+/g;
 
-// 字符串字面量
+// 字符串
 // 不推荐
 var str = new String('Hello');
 // 推荐
 var str = 'Hello';
 
-// 数字字面量
+// 数字
 // 不推荐
 var num = new Number(12);
 // 推荐
 var num = 12;
 
-// 布尔字面量
+// 布尔
 // 不推荐
 var isLoaded = new Boolean(false);
 // 以下语句会弹出对话框 Yes
@@ -463,8 +463,8 @@ if (isLoaded) {
 }
 ```
 #### 单行注释
-* 双斜线后，必须跟注释内容保留一个空格
-* 可独占一行, 前边不许有空行, 缩进与下一行代码保持一致
+* 双斜线后，必须跟注释内容保留一个空格，即： `// 前面有一个空格`
+* 可独占一行, 前边有空行, 缩进与下一行代码保持一致
 * 可位于一个代码行的末尾，注意这里的格式
 
 ```js
@@ -480,7 +480,7 @@ var zhangsan = 'zhangsan';    // 双斜线距离分号一个缩进, 双斜线后
 
 #### 多行注释
 * 最少三行, 格式如下
-* 前边留空一行
+* **前边留空一行**
 
 ```js
 
@@ -490,10 +490,10 @@ var zhangsan = 'zhangsan';    // 双斜线距离分号一个缩进, 双斜线后
 ```
 
 ##### 何时使用
-* 难于理解的代码段
-* 可能存在错误的代码段
-* 浏览器特殊的HACK代码
-* 业务逻辑强相关的代码
+* **难于理解**的代码段
+* **可能存在错误**的代码段
+* 浏览器特殊的**HACK代码**
+* **业务逻辑强**相关的代码
 
 #### 文档注释
 对于函数以及全局变量, 需要有详细的文档注释. 文档注释是使用`@param` `@return`等标签来注解, 请参考 <http://usejsdoc.org/>
